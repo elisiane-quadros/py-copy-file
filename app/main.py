@@ -1,4 +1,3 @@
-import os
 def copy_file(command: str) -> None:
     parts = command.split()
 
@@ -7,7 +6,6 @@ def copy_file(command: str) -> None:
 
     source_file = parts[1]
     target_file = parts[2]
-
 
     if source_file == target_file:
         return
