@@ -1,4 +1,4 @@
-
+import os
 def copy_file(command: str) -> None:
     parts = command.split()
 
@@ -8,11 +8,9 @@ def copy_file(command: str) -> None:
     source_file = parts[1]
     target_file = parts[2]
 
+
     if source_file == target_file:
         return
 
-    try:
-        with open(source_file, "r") as sf, open(target_file, "w") as tf:
-            tf.write(sf.read())
-    except FileNotFoundError:
-        return
+    with open(source_file, "r") as sf, open(target_file, "w") as tf:
+        tf.write(sf.read())
